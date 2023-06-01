@@ -57,6 +57,8 @@ if verificadorcpf_2 == 0 or verificadorcpf_2 == 1:
 else:
     Cd2 = 11 - verificadorcpf_2
 
+#=======================================================================
+
 #===================geração do digito de verificação====================
 d7 = random.choice(rg)
 d6 = random.choice(rg)
@@ -71,9 +73,9 @@ d1 = ver
 #========================================================================
 
 print("\n\t"+"*"*40)
-print("\t*"+"Nome:", random.choice(nomes), random.choice(sobrenome), random.choice(last_name), "\t\t UF:", uf)
+print("\t*"+"Nome:", random.choice(nomes), random.choice(sobrenome), random.choice(last_name))
 print("\t*"+f"RG: {d1}.{d2}{d3}{d4}.{d5}{d6}{d7} ")
 print("\t*"+f"Nascimento: {random.choice(dia)}/{random.choice(mes)}/{random.choice(ano)} ")
-print("\t*"+f"CPF: {c1}{c2}{c3}.{c4}{c5}{c6}.{c7}{c8}{c9}-{Cd1}{Cd2}")
+print("\t*"+f"CPF: {c1}{c2}{c3}.{c4}{c5}{c6}.{c7}{c8}{c9}-{Cd1}{Cd2}", "\t\t UF:", uf)
 print("\t"+"*"*40)
 
