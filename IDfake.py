@@ -1,6 +1,6 @@
 import random
 
-uf = str(input("Informe a UF (Use letras maiúsculas): \n"))
+
 
 nomes = ["Pedro", "Luiza", "Lucas", "Davi", 'Mateus', 'Henrique', 'Julia', 'Maria', 'Janete', 'Mariana', 'Leonardo']
 sobrenome = ['Santos', 'Fernandes', 'Souza', 'Grochevski', 'Duarte', 'Lins']
@@ -10,9 +10,10 @@ dia = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
 mes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 ano = []
 cpf = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+uf_all = ['DF', 'GO', 'MS', 'MT', 'TO', 'AC', 'AM', 'AP', 'PA', 'RO', 'RR', 'CE', 'MA', 'PI', 'AL', 'PB', 'PE', 'RN', 'BA', 'SE', 'MG', 'ES', 'RJ', 'SP', 'PR', 'SC', 'RS']
 for i in range(1980, 2024):
     ano.append(i)
-
+uf = random.choice(uf_all)
 #============= Gerador de CPF ============
 c1 = random.choice(cpf)
 c2 = random.choice(cpf)
@@ -70,7 +71,7 @@ d1 = ver
 #========================================================================
 
 print("\n\t"+"*"*40)
-print("\t*"+"Nome:", random.choice(nomes), random.choice(sobrenome), random.choice(last_name))
+print("\t*"+"Nome:", random.choice(nomes), random.choice(sobrenome), random.choice(last_name), "\t\t UF:", uf)
 print("\t*"+f"RG: {d1}.{d2}{d3}{d4}.{d5}{d6}{d7} ")
 print("\t*"+f"Nascimento: {random.choice(dia)}/{random.choice(mes)}/{random.choice(ano)} ")
 print("\t*"+f"CPF: {c1}{c2}{c3}.{c4}{c5}{c6}.{c7}{c8}{c9}-{Cd1}{Cd2}")
